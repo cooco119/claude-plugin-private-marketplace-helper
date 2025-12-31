@@ -10,7 +10,7 @@ Claude Code currently [doesn't support private repository authentication](https:
 
 ```bash
 # Add this marketplace
-claude plugin marketplace add jaejun-lee/claude-plugin-private-marketplace-helper
+claude plugin marketplace add cooco119/claude-plugin-private-marketplace-helper
 
 # Install the plugin
 claude plugin install private-marketplace-helper@private-marketplace-helper
@@ -63,6 +63,25 @@ claude plugin install my-plugin@my-private-marketplace
 - Git configured with access to the private repository
 - For SSH: SSH keys set up for GitHub
 - For HTTPS: Git credential helper configured
+
+## Nested Plugin Sources
+
+This workaround also helps with [nested plugin source issues](https://github.com/anthropics/claude-code/issues/9756#issuecomment-3677054300) where `marketplace.json` references external private repositories.
+
+**Tested and working:** GitHub with `gh auth` (keyring) authentication.
+
+> **Note:** If you encounter issues with GitLab or other providers, please [open an issue](https://github.com/cooco119/claude-plugin-private-marketplace-helper/issues) or submit a PR!
+
+## Acknowledgements
+
+This plugin implements the manual workaround described by [@lindner](https://github.com/lindner) in [claude-code#9756](https://github.com/anthropics/claude-code/issues/9756#issuecomment-3662457130).
+
+## Contributing
+
+Found a bug or have an improvement? Contributions are welcome!
+
+- [Open an issue](https://github.com/cooco119/claude-plugin-private-marketplace-helper/issues)
+- [Submit a pull request](https://github.com/cooco119/claude-plugin-private-marketplace-helper/pulls)
 
 ## License
 
