@@ -1,0 +1,23 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "private-marketplace-helper",
+  "description": "Helper plugin to install private GitHub marketplace plugins using shell authentication",
+  "owner": {
+    "name": "jaejun.lee",
+    "email": "markman0510@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "private-marketplace-helper",
+      "description": "Add private GitHub marketplaces using shell git authentication",
+      "version": "1.0.0",
+      "author": {
+        "name": "jaejun.lee",
+        "email": "markman0510@gmail.com"
+      },
+      "source": "./plugins/private-marketplace-helper",
+      "category": "productivity",
+      "keywords": ["private", "marketplace", "plugin", "github", "authentication"]
+    }
+  ]
+}
