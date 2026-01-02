@@ -18,9 +18,19 @@ claude plugin install private-marketplace-helper@private-marketplace-helper
 
 ## Usage
 
+### Add a Marketplace
+
 ```
 /private-marketplace-helper:add <github-url>
 ```
+
+### Update a Marketplace
+
+```
+/private-marketplace-helper:update [marketplace-name]
+```
+
+If no name is provided, lists all installed marketplaces and lets you choose which to update (or update all).
 
 ### Supported URL Formats
 

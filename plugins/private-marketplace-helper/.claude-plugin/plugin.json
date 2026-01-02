@@ -1,10 +1,10 @@
 {
   "name": "private-marketplace-helper",
-  "description": "Add private GitHub marketplaces using shell git authentication",
-  "version": "1.0.0",
+  "description": "Add and update private GitHub marketplaces using shell git authentication",
+  "version": "1.1.0",
   "author": {
     "name": "jaejun.lee",
     "email": "markman0510@gmail.com"
   },
-  "keywords": ["private", "marketplace", "plugin", "github"]
+  "keywords": ["private", "marketplace", "plugin", "github", "update"]
 }
