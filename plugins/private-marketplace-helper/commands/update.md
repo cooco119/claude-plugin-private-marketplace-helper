@@ -58,7 +58,17 @@ Ask user for confirmation before running hard reset: "Local changes detected. Re
 - For SSH: `ssh -T git@github.com`
 - For HTTPS: Check credential helper configuration
 
-### Step 4: Update known_marketplaces.json
+### Step 4: Clear Plugin Cache
+
+Remove cached plugin versions from the marketplace to ensure fresh reinstall:
+
+```bash
+rm -rf ~/.claude/plugins/cache/*@<marketplace-name>
+```
+
+This deletes any cached plugin directories that end with `@<marketplace-name>`.
+
+### Step 5: Update known_marketplaces.json
 
 Read `~/.claude/plugins/known_marketplaces.json` and update the `lastUpdated` timestamp for this marketplace:
 
@@ -72,7 +82,7 @@ Read `~/.claude/plugins/known_marketplaces.json` and update the `lastUpdated` ti
 
 Only update the `lastUpdated` field, preserve all other existing fields.
 
-### Step 5: Report Results
+### Step 6: Report Results
 
 Check the current version in marketplace.json:
 ```bash
@@ -95,8 +105,9 @@ To reinstall a plugin with the latest version:
 
 If user chose 'all', loop through each marketplace and:
 1. Run git pull
-2. Update lastUpdated timestamp
-3. Collect results
+2. Clear plugin cache for that marketplace
+3. Update lastUpdated timestamp
+4. Collect results
 
 **Summary output:**
 ```
